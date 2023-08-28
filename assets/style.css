@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.around {
+  justify-content: space-around;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.a-center {
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  background: #1F1C26;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 28px 0;
+}
+header a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #F2F2F2;
+  margin: 0 20px;
+}
+header a:hover {
+  border-bottom: 5px solid #59253E;
+}
+
+.left_work {
+  width: 431px;
+
+}
+.left_work h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 96px;
+  text-align: center;
+  letter-spacing: 0.215em;
+  color: #FFFFFF;
+}
+.left_work span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 43px;
+  text-align: center;
+  letter-spacing: 0.215em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.left_work a {
+  padding: 30px 40px;
+  margin-top: 96px;
+  background: #F24B88;
+  border-radius: 10px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+.text_info {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(255, 255, 255, 0.36);
+}
+
+.right_work img {
+  border-radius: 10px;
+}
+
+.box_info {
+  background: #332F3C;
+  border-radius: 10px;
+  width: 335px;
+  height: 210px;
+  margin: 20px 0 0 24px;
+}
+.box_info span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+.box_info a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #FFFFFF;
+}
+
+.arrow {
+  background: #F24B88;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+/*# sourceMappingURL=style.css.map */

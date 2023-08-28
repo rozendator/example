@@ -1,0 +1,915 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.around {
+  justify-content: space-around;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.end {
+  justify-content: flex-end;
+}
+
+.a-center {
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  background: #1F1C26;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 28px 0;
+}
+
+nav a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #F2F2F2;
+  margin: 0 20px;
+}
+nav a:hover {
+  border-bottom: 5px solid #59253E;
+}
+
+.mobile_menu {
+  display: none;
+}
+
+#menu_toggle {
+  opacity: 0;
+}
+
+#menu_toggle:checked ~ .menu_btn > span {
+  transform: rotate(45deg);
+}
+
+#menu_toggle:checked ~ .menu_btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+#menu_toggle:checked ~ .menu_btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu_toggle:checked ~ .menu {
+  visibility: visible;
+  right: 0;
+}
+
+.menu_btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu_btn > span,
+.menu_btn > span::before,
+.menu_btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+  transition-duration: 0.25s;
+}
+
+.menu_btn > span::before {
+  content: "";
+  top: -8px;
+}
+
+.menu_btn > span::after {
+  content: "";
+  top: 8px;
+}
+
+.menu {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: -100%;
+  width: 200px;
+  height: 40%;
+  margin: 0;
+  padding: 80px 0;
+  background: #59253E;
+  box-shadow: -8px 8px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 20px 0px 0px 20px;
+  transition-duration: 0.25s;
+}
+.menu a {
+  display: block;
+  padding: 8px 68px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #F2F2F2;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.login {
+  background: #F24B88;
+  padding: 1px 12px;
+  border: none;
+  margin-right: -4px;
+  height: 26px;
+}
+
+.sign_in {
+  border: 1px solid #FFFFFF;
+  background-color: #1F1C26;
+}
+
+.rectangle {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #F2F2F2;
+}
+
+.workout_plan {
+  margin-top: 60px;
+  margin-bottom: 148px;
+}
+
+.left_work {
+  width: 432px;
+  height: 468px;
+}
+
+.week {
+  margin-bottom: 40px;
+}
+.week h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 96px;
+  letter-spacing: 0.215em;
+  color: #FFFFFF;
+}
+.week span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 43px;
+  letter-spacing: 0.215em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-top: 24px;
+}
+
+.btn {
+  width: 190px;
+  height: 70px;
+  margin-top: 88px;
+  background: #F24B88;
+  border-radius: 10px;
+  border: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+.two {
+  margin-left: 44px;
+}
+
+.text_info {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(255, 255, 255, 0.36);
+}
+
+.main_img img {
+  border-radius: 10px;
+}
+
+.mobile_img {
+  display: none;
+}
+
+.box_info {
+  background: #332F3C;
+  border-radius: 10px;
+  width: 335px;
+  height: 208px;
+  padding: 32px 24px;
+  margin-left: 24px;
+}
+.box_info span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+.box_info a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #FFFFFF;
+}
+
+.down {
+  margin-top: 24px;
+}
+
+.more {
+  margin-top: 24px;
+}
+
+.arrow {
+  background: #F24B88;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+
+.training_plan {
+  margin-bottom: 150px;
+}
+
+.latest_text {
+  position: relative;
+}
+
+.latest_text:after {
+  content: "";
+  background: #59253E;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 70px;
+}
+
+.title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border-bottom-width: 15px;
+}
+
+.program {
+  width: 440px;
+  margin-top: 40px;
+}
+.program span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 8px 0;
+}
+
+.see_more {
+  background: #F24B88;
+  border-radius: 5px;
+  width: 98px;
+  height: 36px;
+  border: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #FFFFFF;
+  margin-top: 20px;
+}
+
+.mobile_button {
+  display: none;
+}
+
+.our_team {
+  margin-bottom: 158px;
+}
+
+.our {
+  position: relative;
+}
+
+.our::after {
+  content: "";
+  background: #59253E;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 68px;
+}
+
+.trainer {
+  background: #F2F2F2;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25);
+  width: 328px;
+  height: 460px;
+  margin-top: 60px;
+}
+.trainer img {
+  width: 328px;
+  height: 240px;
+}
+
+.right {
+  margin-left: 40px;
+}
+
+.trainer_info {
+  padding: 20px;
+}
+.trainer_info h4 {
+  font-family: "Poppins Bold";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: uppercase;
+  color: #0D0D0D;
+}
+.trainer_info span {
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 19px;
+  text-transform: capitalize;
+  color: #332F3C;
+}
+.trainer_info p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: rgba(13, 13, 13, 0.36);
+}
+
+.mobile_text {
+  display: none;
+}
+
+.discover {
+  margin-bottom: 60px;
+}
+
+.discover_info {
+  background: #332F3C;
+  height: 382px;
+  padding: 65px 100px;
+}
+.discover_info h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 72px;
+  text-align: center;
+  letter-spacing: 0.215em;
+  color: #FFFFFF;
+}
+.discover_info p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.discover_info button {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
+  border: none;
+  width: 200px;
+  height: 70px;
+}
+
+.view {
+  margin-top: 44px;
+}
+
+.pink {
+  background: #F24B88;
+  border-radius: 10px;
+}
+
+.black {
+  background: #1F1C26;
+  border-radius: 10px;
+  margin-left: 32px;
+}
+
+.footer_link {
+  border-top: 1px solid #F2F2F2;
+  border-bottom: 1px solid #F2F2F2;
+  padding-top: 36px;
+  padding-bottom: 16px;
+}
+.footer_link p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+  margin: 16px 0;
+}
+.footer_link span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.info_link {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  margin: 12px 0;
+}
+
+.adapt_up {
+  width: 600px;
+}
+
+.subscribe button {
+  background: #F24B88;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  border: none;
+  width: 92px;
+  height: 36px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-top: 12px;
+}
+
+.form_control {
+  padding: 6px 70px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+  color: #7B7B7B;
+  background: #FFFFFF;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin-top: 24px;
+}
+
+.copyright {
+  padding: 36px 0;
+}
+.copyright span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+}
+
+@media (max-width: 1440px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .program img {
+    width: 370px;
+  }
+
+  .trainer {
+    width: 284px;
+  }
+  .trainer img {
+    width: 284px;
+  }
+
+  .right {
+    margin-left: 20px;
+  }
+
+  .adapt_up {
+    width: 480px;
+  }
+}
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+
+  .btn {
+    width: 140px;
+  }
+
+  .program img {
+    width: 308px;
+  }
+
+  .trainer {
+    width: 234px;
+    height: 478px;
+  }
+  .trainer img {
+    width: 234px;
+  }
+
+  .adapt_up {
+    width: 200px;
+  }
+
+  .touch {
+    text-align: center;
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    max-width: 840px;
+  }
+
+  .main_img img {
+    height: 420px;
+  }
+
+  .explore {
+    display: none;
+  }
+
+  .two {
+    display: none;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .plan {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .program img {
+    width: 354px;
+    border-radius: 10px;
+  }
+
+  .team {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .trainer {
+    width: 312px;
+  }
+  .trainer img {
+    width: 312px;
+  }
+
+  .footer_link {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .social_link {
+    justify-content: center;
+  }
+
+  .link_end {
+    flex-direction: column-reverse;
+  }
+
+  .subscribe {
+    align-items: center;
+  }
+
+  .adapt_up {
+    margin-top: 40px;
+    width: 460px;
+    justify-content: space-around;
+  }
+}
+@media (max-width: 840px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .logo {
+    width: 188px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .mobile_menu {
+    display: block;
+  }
+
+  .login {
+    margin-left: 36px;
+  }
+
+  .workout_plan .container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .left_work {
+    text-align: center;
+  }
+
+  .main_img {
+    display: none;
+  }
+
+  .mobile_img {
+    display: block;
+  }
+  .mobile_img img {
+    border-radius: 10px;
+  }
+
+  .explore {
+    display: none;
+  }
+
+  .latest_text {
+    justify-content: center;
+  }
+  .latest_text a {
+    display: none;
+  }
+  .latest_text h3 {
+    border-bottom: 5px solid #59253E;
+  }
+
+  .latest_text:after {
+    display: none;
+  }
+
+  .program {
+    width: 340px;
+  }
+  .program p {
+    display: none;
+  }
+
+  .first {
+    display: none;
+  }
+
+  .second {
+    display: none;
+  }
+
+  .our {
+    text-align: center;
+  }
+
+  .our::after {
+    bottom: 0;
+    left: 280px;
+    width: 140px;
+  }
+
+  .trainer {
+    background-color: #1F1C26;
+    box-shadow: none;
+    width: 240px;
+    height: 224px;
+  }
+  .trainer img {
+    border-radius: 10px;
+    width: 240px;
+  }
+
+  .trainer_info {
+    display: none;
+  }
+
+  .mobile_button {
+    display: block;
+    margin-top: 56px;
+  }
+
+  .mobile_text {
+    display: block;
+    font-family: "Poppins Bold";
+    font-style: italic;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .discover_info {
+    height: 448px;
+    padding: 48px 80px;
+  }
+  .discover_info button {
+    width: 174px;
+  }
+}
+@media (max-width: 720px) {
+  .container {
+    max-width: 620px;
+  }
+
+  .our::after {
+    bottom: 0;
+    left: 240px;
+  }
+}
+@media (max-width: 620px) {
+  .container {
+    max-width: 500px;
+  }
+
+  .our::after {
+    bottom: 0;
+    left: 183px;
+  }
+
+  .discover_info {
+    padding: 12px 8px;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    max-width: 400px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .week h2 {
+    font-size: 48px;
+  }
+
+  .trainer {
+    width: 200px;
+  }
+  .trainer img {
+    width: 200px;
+  }
+
+  .our::after {
+    bottom: 0;
+    left: 130px;
+  }
+
+  .discover_info {
+    padding: 48px 8px;
+  }
+  .discover_info h3 {
+    font-size: 28px;
+  }
+  .discover_info button {
+    width: 148px;
+  }
+
+  .adapt_up {
+    justify-content: center;
+  }
+}
+@media (max-width: 400px) {
+  .container {
+    max-width: 320px;
+  }
+
+  .program img {
+    width: 324px;
+  }
+
+  .our::after {
+    bottom: 0;
+    left: 90px;
+  }
+
+  .trainer {
+    width: 168px;
+  }
+  .trainer img {
+    width: 180px;
+    height: 180px;
+  }
+  .trainer .discover_info h3 {
+    font-size: 24px;
+  }
+
+  .discover_info button {
+    width: 132px;
+    height: 60px;
+  }
+
+  .view {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 320px) {
+  .container {
+    max-width: 300px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
